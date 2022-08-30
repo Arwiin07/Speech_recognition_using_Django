@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% block content %}
+
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'ok.css'%}">
+        </head>
+<body class="bg">
+<p</p>
+
+<h1>AUDIO SENTIMENT ANALYSIS</h1>
+<form action = "/create/audiofile/process/" method = "POST">
+        {% csrf_token %}
+
+<div align="center";>
+    <h3>TRANSCRIPTED TEXT</h3>
+<textarea rows="4" cols="50" maxlength="50"> {{text_transcript}} </textarea>
+    <div class="arwin" style = "position:relative; left:80px; ">
+        <input  type="file" id="myFile" name="filename"> <br>
+    </div>
+    <div class="submit" onclick="change()">
+        <input type="submit" >
+      </div>
+</div>
+
+<!--    <label for="your_name">Your name: </label>-->
+<!--    <input id="your_name" type="text" name="your_name">-->
+<!--    <input type="submit" value="OK">-->
+</form>
+<div align="center";>
+    <h3>SENTIMENT ANALYSIS</h3>
+<textarea rows="4" cols="30" maxlength="30"> {{score}} </textarea>
+</div>
+
+
+
+</body>
+    {% block javascript %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+{% endblock javascript %}
+
+
+</script>
+
+</html>
+{% endblock content %}
+

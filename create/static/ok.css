@@ -1,0 +1,23 @@
+.bg {
+    /* The image used */
+    background-image: url("https://media.istockphoto.com/photos/abstract-blue-cyan-background-picture-id995719694?b=1&k=20&m=995719694&s=170667a&w=0&h=bQ4Imx3qGb0-ZCPz5JIjyOWpgYENfVzbO3wR_pnNpYw=");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.arwin{
+    margin-left: -80%;
+}
+
+.submit{
+    padding-top: 20px;
+    margin-left: -80%;
+}
+h1{
+text-align:center;
+}

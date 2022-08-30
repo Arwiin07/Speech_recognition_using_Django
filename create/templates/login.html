@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Login</title>
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'login.css'%}">
+</head>
+<body>
+    <h2>Login Page</h2><br>
+    <div class="login">
+    <form id="login" method="post" action="{% url 'index' %}">
+        {% csrf_token %}
+
+        <label><b>User Name
+        </b>
+        </label>
+        <input type="text" name="Uname" id="Uname" placeholder="Username">
+        <br><br>
+        <label><b>Password
+        </b>
+        </label>
+        <input type="Password" name="Pass" id="Pass" placeholder="Password">
+        <br><br>
+<!--        <a href="index">aaa</a>-->
+<!--        <button><a href="index"></a>LOGIN</button>-->
+        <input type="submit" name="log" id="log" value="Log In Here">
+        <br><br>
+        <input type="checkbox" id="check">
+        <span>Remember me</span>
+        <br><br>
+        Forgot <a href="#">Password</a>
+    </form>
+</div>
+</body>
+</html>
