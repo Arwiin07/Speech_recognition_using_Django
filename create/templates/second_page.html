@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Audio Sentiment Analysis</h1>
+<form action = "/audiofile/process/" method = "POST">
+        {% csrf_token %}
+
+        <input  type="file" id="myFile" name="filename"> <br>
+<br>
+
+<div class="submit" onclick="change()">
+        <input type="submit" value="Transcript" >
+      </div>
+</form>
+
+
+</body>
+</html>
