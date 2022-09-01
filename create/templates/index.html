@@ -10,17 +10,23 @@
 <p</p>
 
 <h1>AUDIO SENTIMENT ANALYSIS</h1>
-<form action = "/create/audiofile/process/" method = "POST">
-        {% csrf_token %}
+<!--<form action = "/create/audiofile/process/" method = "POST">-->
+<!--        {% csrf_token %}-->
 
 <div align="center";>
     <h3>TRANSCRIPTED TEXT</h3>
+    <br>
+    <br>
+    {{file_name}}
+    <br>
+    <br>
+
 <textarea rows="4" cols="50" maxlength="50"> {{text_transcript}} </textarea>
     <div class="arwin" style = "position:relative; left:80px; ">
-        <input  type="file" id="myFile" name="filename"> <br>
+<!--        <input  type="file" id="myFile" name="filename"> <br>-->
     </div>
-    <div class="submit" onclick="change()">
-        <input type="submit" value="Transcript" >
+<!--    <div class="submit" onclick="change()">-->
+<!--        <input type="submit" value="Transcript" >-->
       </div>
 </div>
 
