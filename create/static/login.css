@@ -2,8 +2,10 @@ body
 {
     margin: 0;
     padding: 0;
-    background-color:#6abadeba;
+    background-image:url("https://c4.wallpaperflare.com/wallpaper/542/50/545/simple-background-blue-simple-minimalism-wallpaper-preview.jpg");
     font-family: 'Arial';
+    background-size: cover;
+
 }
 .login{
         width: 382px;
@@ -11,8 +13,9 @@ body
         margin: auto;
         margin: 20 0 0 450px;
         padding: 80px;
-        background: #23463f;
+        background: #080223;
         border-radius: 15px ;
+
 
 }
 h2{
@@ -56,4 +59,16 @@ span{
 a{
     float: right;
     background-color: grey;
+}
+
+.transcription{
+        width: 550px;
+        overflow: hidden;
+        margin: auto;
+        margin: 20 0 0 450px;
+        padding: 80px;
+        background: orange;
+        border-radius: 15px ;
+
+
 }

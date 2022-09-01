@@ -3,19 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        h1 {
+  display: inline; /* the default for span */
+  width: 300px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: red;
+}
+
+    </style>
+
+    {% for message in messages %}
+<div style="color:red;font-weight:bold" class="alert {{ message.tags }} alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message | safe }}
+</div>
+{% endfor %}
+                {% load static %}
+        <link rel="stylesheet" href="{%static 'second_page.css'%}">
 </head>
 <body>
-<h1>Audio Sentiment Analysis</h1>
+<!--<h1>Audio Sentiment Analysis</h1>-->
+<br>
+<br>
+<center><h1 style="font-family: Georgia, serif;color:white">Audio Sentiment Analysis</h1></center>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <form action = "/audiofile/process/" method = "POST">
         {% csrf_token %}
 
-        <input  type="file" id="myFile" name="filename"> <br>
+        <input class="btn" type="file" id="myFile"name="filename"> <br>
 <br>
 
 <div class="submit" onclick="change()">
-        <input type="submit" value="Transcript" >
+        <input type="submit" class="btn" onclick="fileExist()" value="Transcript" >
       </div>
+<!--        {{ message | safe }}-->
+
 </form>
+
+
+<!--<script>-->
+<!--    function fileExist(){-->
+<!--    alert("Alert ");-->
+<!--    }-->
+<!--</script>-->
+
 
 
 </body>

@@ -18,6 +18,6 @@ from django.urls import path,include
 from create import views
 
 urlpatterns = [
-    path('',include('create.urls'),name="login_index"),
+        path('',include('create.urls'),name="login_index"),
     path('admin/', admin.site.urls),
 ]

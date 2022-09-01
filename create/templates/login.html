@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="{%static 'login.css'%}">
 </head>
 <body>
-    <h2>Login Page</h2><br>
+    <h2 style="color: yellow;">Login Page</h2><br>
     <div class="login">
     <form id="login" method="post" action="{% url 'choose' %}">
         {% csrf_token %}
@@ -28,7 +28,7 @@
         <input type="checkbox" id="check">
         <span>Remember me</span>
         <br><br>
-        Forgot <a href="#">Password</a>
+        <a style="color: white;" href="#">Forgot Password</a>
     </form>
 </div>
 </body>
