@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-            {% load static %}
+<!--            {% load static %}-->
 
-            <link rel="stylesheet" href="{%static 'login.css'%}">
+<!--            <link rel="stylesheet" href="{%static 'login.css'%}">-->
 
 
     <style>
@@ -35,6 +35,15 @@
   background-color: orange;
 }
 
+ol {
+  display: table;
+  margin: 0 auto;
+    border:1px solid #000;
+
+
+
+}
+
 
         </style>
 </head>
@@ -43,9 +52,11 @@
 <br>
 <center><h1 style="font-family: Georgia, serif;color:white" class="heading">Lists Of Transcriptions</h1></center>
 <br>
+<br>
+<br>
 <!--<p>The ol element defines an ordered list:</p>-->
-<div class="transcription">
-    <left>
+<div>
+
 <ol>
         {% for elements in lists_of_transcripts %}
 
@@ -56,7 +67,7 @@
 
 
 </ol>
-            </left>
+
 
 </div>
 

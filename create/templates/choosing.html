@@ -1,6 +1,24 @@
-"<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+         .heading{
+                font-size: 32px;
+                color:black;
+                font-weight : 900;
+                margin-left: center;
+                margin-right: center%;
+            }
+
+                         h1 {
+  display: inline; /* the default for span */
+  width: 300px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: orange;
+}
+    </style>
     <meta charset="UTF-8">
     <title>Choose_Between</title>
 <!--    <link stylesheet-->
@@ -9,14 +27,22 @@
         <link rel="stylesheet" href="{%static 'choosing.css'%}">
 </head>
 <body>
-<center><h1 style="font-family: Georgia, serif;color:white"><span class="a">Audio Sentiment Analysis</span></h1></center>
 <br>
-<h2 style="font-family: Georgia, serif;color:white">Choose Options :</h2>
+<center><h1 style="font-family: Georgia, serif;color:white">Audio Speech Recogniton and Sentiment Analysis</h1>
 <br>
-<a href="lists"><button class="button-33" role="button">View All Transcriptions</button></a>
+    <br>
+    <br>
+<!--    <center><h1 style="font-family: Georgia, serif;color:white" class="heading">Lists Of Transcriptions</h1></center>-->
+
+<!--<h2 style="font-family: Georgia, serif;color:white">Choose Options :</h2>-->
+<br>
+    <br>
+<a href="lists"><button class="button-33" role="button">History Of Transcriptions</button></a>
 <br>
 <br>
-<a href="chosen_file/"><button class="button-33" role="button">Create Transcription</button></a>
+    <br>
+<a href="chosen_file/"><button class="button-33" role="button">Perform Speech Recognition with Sentiment Analysis</button></a>
+</center>
 
 </body>
 </html>

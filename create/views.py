@@ -22,7 +22,7 @@ def audio_process(request):
     file_name1=request.POST.get('filename')
     # import pdb;pdb.set_trace()
     if models.Person.objects.filter(file_name=file_name1).exists():
-        messages.error(request, "Error: File Already Exist,Choose Another File.")
+        messages.error(request, "Error: File Already Transcripted,Choose Another File.")
         return render(request,"second_page.html")
     else:
         data_out = audioprocess.upload(audio_dir)

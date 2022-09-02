@@ -1,10 +1,11 @@
 body
 {
-    margin: 0;
+    margin: 15px;
     padding: 0;
     background-image:url("https://c4.wallpaperflare.com/wallpaper/542/50/545/simple-background-blue-simple-minimalism-wallpaper-preview.jpg");
     font-family: 'Arial';
     background-size: cover;
+    color:white;
 }
 
 .btn {
@@ -31,5 +32,13 @@ body
   transform: scale(1.05) rotate(-1deg);
 
 
+}
+.design{
+  display: inline; /* the default for span */
+  width: 250px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid black;
+  color:black;
 }
 

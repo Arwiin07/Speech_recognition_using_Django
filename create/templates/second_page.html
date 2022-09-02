@@ -10,7 +10,7 @@
   height: 100px;
   padding: 5px;
   border: 1px solid blue;
-  background-color: red;
+  background-color: orange;
 }
 
     </style>
@@ -30,7 +30,7 @@
 <!--<h1>Audio Sentiment Analysis</h1>-->
 <br>
 <br>
-<center><h1 style="font-family: Georgia, serif;color:white">Audio Sentiment Analysis</h1></center>
+<center><h1 style="font-family: Georgia, serif;color:white">Audio Speech Recognition and Sentiment Analysis</h1></center>
 
 
 
@@ -39,7 +39,7 @@
 <br>
 <br>
 <br>
-
+<center>
 <form action = "/audiofile/process/" method = "POST">
         {% csrf_token %}
 
@@ -52,6 +52,7 @@
 <!--        {{ message | safe }}-->
 
 </form>
+    </center>
 
 
 <!--<script>-->
