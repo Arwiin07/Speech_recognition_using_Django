@@ -22,7 +22,7 @@
 <!--                margin-top: 16px;-->
                 font-size:30px;
                 color: midnightblue;
-                background-image: url('https://c4.wallpaperflare.com/wallpaper/542/50/545/simple-background-blue-simple-minimalism-wallpaper-preview.jpg');
+                background-image: url('https://c4.wallpaperflare.com/wallpaper/22/240/855/texture-gradient-simple-background-blue-wallpaper-preview.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
             }
@@ -38,12 +38,30 @@
 ol {
   display: table;
   margin: 0 auto;
-    border:1px solid #000;
-
-
-
+     border-style: solid ;
+     border-color:#000000;
+  border-width: thick;
 }
-
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
 
         </style>
 </head>
@@ -56,7 +74,7 @@ ol {
 <br>
 <!--<p>The ol element defines an ordered list:</p>-->
 <div>
-
+<h2>
 <ol>
         {% for elements in lists_of_transcripts %}
 
@@ -67,6 +85,7 @@ ol {
 
 
 </ol>
+    </h2>
 
 
 </div>

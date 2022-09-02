@@ -1,43 +1,56 @@
 <!DOCTYPE html>
+<html lang="en">
+
 {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	{%load static%}
+	        <link rel="stylesheet" href="{%static 'second_page.css'%}">
 
-<html>
-    <head>
-        {% load static %}
-        <link rel="stylesheet" href="{%static 'ok.css'%}">
-        </head>
-<body class="bg">
-<p</p>
+	 <style>
+        h1 {
+  display: inline; /* the default for span */
+  width: 300px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: orange;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-size:20px;
+}
 
-<h1>AUDIO SENTIMENT ANALYSIS</h1>
-<!--<form action = "/create/audiofile/process/" method = "POST">-->
-<!--        {% csrf_token %}-->
+    </style>
 
-<div align="center";>
-    <h3>TRANSCRIPTED TEXT</h3>
+</head>
+
+<body>
+<div class="body">
+
+	<!-- Specify fields to be displayed -->
+<!--	{{context.transcripted_sentence}}-->
     <br>
     <br>
-    {{file_name}}
-    <br>
-    <br>
+	<center><h1 style="font-family: Georgia, serif;color:white">Transcription Page</h1></center>
 
-<textarea rows="4" cols="50" maxlength="50"> {{text_transcript}} </textarea>
-    <div class="arwin" style = "position:relative; left:80px; ">
-<!--        <input  type="file" id="myFile" name="filename"> <br>-->
-    </div>
-<!--    <div class="submit" onclick="change()">-->
-<!--        <input type="submit" value="Transcript" >-->
-      </div>
+	<br>
+	<br>
+    <h2 class="design">File Name </h2> <p> {{ file_name }}</p><br/>
+    <br>
+    <h2 class="design">Transcription </h2>  <p> {{ text_transcript}}</p><br/>
+    <br>
+    <h2 class="design">Sentiment Analysis</h2> <p> {{ score}} </p> <br/>
+
 </div>
 
-<!--    <label for="your_name">Your name: </label>-->
-<!--    <input id="your_name" type="text" name="your_name">-->
-<!--    <input type="submit" value="OK">-->
-</form>
-<div align="center";>
-    <h3>SENTIMENT ANALYSIS</h3>
-<textarea rows="4" cols="30" maxlength="30"> {{score}} </textarea>
-</div>
+
+
+
+
+
+
 
 
 
