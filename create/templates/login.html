@@ -6,7 +6,9 @@
         <link rel="stylesheet" href="{%static 'login.css'%}">
 </head>
 <body>
+<div class="loginpage">
     <h2 style="color: yellow;">Login Page</h2><br>
+   </div>
     <div class="login">
     <form id="login" method="post" action="{% url 'choose' %}">
         {% csrf_token %}
@@ -30,6 +32,7 @@
         <br><br>
         <a style="color: white;" href="#">Forgot Password</a>
     </form>
+<!--        <img class="mic" src="https://www.icegif.com/wp-content/uploads/2022/07/icegif-890.gif">-->
 </div>
 </body>
 </html>

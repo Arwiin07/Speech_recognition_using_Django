@@ -2,10 +2,14 @@ body
 {
     margin: 15px;
     padding: 0;
-    background-image:url("https://c4.wallpaperflare.com/wallpaper/542/50/545/simple-background-blue-simple-minimalism-wallpaper-preview.jpg");
+    background-image:url("https://c4.wallpaperflare.com/wallpaper/22/240/855/texture-gradient-simple-background-blue-wallpaper-preview.jpg");
     font-family: 'Arial';
     background-size: cover;
     color:white;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+
 }
 
 .btn {
@@ -38,7 +42,7 @@ body
   width: 250px;
   height: 100px;
   padding: 5px;
-  border: 1px solid black;
-  color:black;
+  border: 1px solid white;
+  color:pink;
 }
 
