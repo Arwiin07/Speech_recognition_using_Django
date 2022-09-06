@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        h1 {
-  display: inline; /* the default for span */
-  width: 300px;
-  height: 100px;
-  padding: 5px;
-  border: 1px solid blue;
-  background-color: orange;
-}
+    h1{
+    font-family: Georgia, serif;
+    background:white;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    width:800px;
+    }
+
 
     </style>
 
@@ -29,8 +30,8 @@
 <body>
 <!--<h1>Audio Sentiment Analysis</h1>-->
 <br>
-<br>
-<center><h1 style="font-family: Georgia, serif;color:white">Audio Speech Recognition and Sentiment Analysis</h1></center>
+
+<center><h1 style="font-family: Georgia, serif;color:black">Audio Speech Recognition and Sentiment Analysis</h1></center>
 
 
 
@@ -40,7 +41,8 @@
 <br>
 <br>
 <center>
-    <h2 style="font-family: Georgia, serif;color:white"> Upload File:</h2>
+
+    <h2 style="font-family: Georgia, serif;"> Upload File:</h2>
 <form action = "/audiofile/process/" method = "POST">
         {% csrf_token %}
 

@@ -21,18 +21,17 @@
 <!--                margin-left:12px;-->
 <!--                margin-top: 16px;-->
                 font-size:30px;
-                color: midnightblue;
-                background-image: url('https://c4.wallpaperflare.com/wallpaper/22/240/855/texture-gradient-simple-background-blue-wallpaper-preview.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
+               background:#1616cd;
+                   background-size: cover;
+
             }
              h1 {
   display: inline; /* the default for span */
   width: 300px;
   height: 100px;
   padding: 5px;
-  border: 1px solid blue;
-  background-color: orange;
+  background-color:7f8180;
+  color:black;
 }
 
 ol {
@@ -43,12 +42,12 @@ ol {
   border-width: thick;
 }
 a:link {
-  color: white;
+  color: blue;
   background-color: transparent;
   text-decoration: none;
 }
 a:visited {
-  color: pink;
+  color: #1616cd;
   background-color: transparent;
   text-decoration: none;
 }
@@ -62,6 +61,19 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
+table,th,td{
+background :white;
+border:1px solid  black;
+ border-collapse: collapse;
+<!-- border-color:  #7f8180;-->
+ color:white;
+ padding:5px;
+}
+<!--.auto td:first-child:after-->
+<!--{-->
+<!--counter-increment:Serial;-->
+<!--content:"Serial is:"counter(Serial);-->
+<!--}-->
 
         </style>
 </head>
@@ -74,23 +86,45 @@ a:active {
 <br>
 <!--<p>The ol element defines an ordered list:</p>-->
 <div>
-<h2>
-<ol>
-        {% for elements in lists_of_transcripts %}
 
-            <li>
-            <a href="{% url 'detail_view' elements.id %}">{{elements}}</a>
-            </li>
-        {%endfor%}
+<!--<table style="width:100%">-->
+    <center>
+            {% if lists_of_transcripts%}
+
+<table style="width:70%">
+  <tr>
+      <th>S.No</th>
+    <th>File_Name</th>
+    <th>Transcription</th>
+    <th>Link</th>
+  </tr>
+                {% for elements in lists_of_transcripts %}
+
+   <tr>
+       <td>{{forloop.counter}}.</td>
+    <td id = "test">{{elements.file_name}}</td>
+    <td>{{elements.transcripted_Sentence_slice}}................</td>
+    <td> <a href="{% url 'detail_view' elements.id %}">Click Here!</a></td>
+  </tr>
+    {%endfor%}
 
 
-</ol>
-    </h2>
-
-
+</table>
+           {%else%}
+   <h2 style="color:orange">No Records Found!</h2>
+    {%endif%}
+        </center>
 </div>
 
 
 
 </body>
+<!--<script>-->
+<!--var div=document.createElement("div");-->
+<!--div.innerHTML='<p><span style="color:red; font-size:20px; font-family:Arial">Here is the real text that I want to strip to 100 characters</span></p><p>Can be splited <b>between</b> multiple divs. Here is some more text to be longer <p>';-->
+<!--var excerpt=div.innerText.substring(0,100);-->
+<!--console.log(excerpt)-->
+
+
+<!--</script>-->
 </html>

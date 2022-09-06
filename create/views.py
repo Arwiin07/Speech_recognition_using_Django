@@ -3,11 +3,12 @@ from django.http import HttpResponse
 from django.template import loader
 from . import audioprocess,models
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 def index(request,*args,**kwargs):
-    import pdb;pdb.set_trace()
-    if request.user.username==request.POST.get("Uname"):
+    # import pdb;pdb.set_trace()
+    if request.user.username==request.POST.get("Uname") :
         return render(request,'second_page.html')
     else:
         return render(request, 'login.html')
@@ -28,9 +29,9 @@ def audio_process(request):
         data_out = audioprocess.upload(audio_dir)
         transcript,out_score = audioprocess.speechrecog(data_out)
         print(transcript,'sdjkh')
-    # import pdb;pdb.set_trace()
+        # import pdb;pdb.set_trace()
     # if models.Person.objects.filter(file_name=file_name1).exists():
-        models.Person.objects.create(file_name=file_name1,transcripted_sentence=transcript,Sentiment_analysis=out_score)
+        models.Person.objects.create(file_name=file_name1,transcripted_sentence=transcript,Sentiment_analysis=out_score,transcripted_Sentence_slice=transcript[0:45])
         return render(request,'index.html',{'text_transcript':transcript,'score':out_score,'file_name':file_name1})
 
 # Create your views here.
@@ -62,12 +63,13 @@ def second_page(request):
     # import pdb;pdb.set_trace()
     return render(request,'second_page.html')
 
-
+# @login_required
 def choosing(request):
-    if request.user.username==request.POST.get("Uname"):
-        return render(request,'choosing.html')
+    # import pdb;pdb.set_trace()
+    if request.user.username!=request.POST.get("Uname"):
+        return render(request,'login.html')
     else:
-        return render(request, 'login.html')
+        return render(request, 'choosing.html')
     # return render(request,'choosing.html')
 
 def lists(request):

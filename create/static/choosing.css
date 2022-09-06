@@ -2,7 +2,7 @@ body
 {
     margin: 0;
     padding: 0;
-    background-image:url("https://c4.wallpaperflare.com/wallpaper/22/240/855/texture-gradient-simple-background-blue-wallpaper-preview.jpg");
+    background:#1616cd;
     font-family: 'Arial';
     background-size: cover;
 }
@@ -11,18 +11,16 @@ span.a {
   width: 300px;
   height: 100px;
   padding: 5px;
-  border: 1px solid blue;
-  background-color: orange;
 }
 
 
 
 /* CSS */
 .button-33 {
-  background-color: #c2fbd7;
+  background-color: white;
   border-radius: 100px;
   box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-  color: green;
+  color: black;
   cursor: pointer;
   display: inline-block;
   font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;

@@ -14,8 +14,8 @@
   width: 300px;
   height: 100px;
   padding: 5px;
-  border: 1px solid blue;
-  background-color: orange;
+<!--  border: 1px solid blue;-->
+<!--  background-color: orange;-->
 }
 p {
   font-family: "Times New Roman", Times, serif;
@@ -37,11 +37,17 @@ p {
 
 	<br>
 	<br>
-    <h2 class="design">File Name </h2> <p> {{ file_name }}</p><br/>
+    <div class="onn">
+    <h2 class="design">File Name :</h2> <p class="design"> {{ file_name }}</p><br/>
+    </div>
     <br>
-    <h2 class="design">Transcription </h2>  <p> {{ text_transcript}}</p><br/>
+    <div class="onn">
+    <h2 class="design">Transcription : </h2>  <p class="design"> {{ text_transcript}}</p><br/>
+        </div>
     <br>
-    <h2 class="design">Sentiment Analysis</h2> <p> {{ score}} </p> <br/>
+    <div class="onn">
+    <h2 class="design">Sentiment Analysis :</h2> <p class="design"> {{ score}} </p> <br/>
+    </div>
 
 </div>
 
